@@ -1,0 +1,304 @@
+/* reset styles */
+
+* {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-webkit-tap-highlight-color: transparent;
+
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-webkit-tap-highlight-color: transparent;
+}
+
+a:hover {
+	outline: none;
+	text-decoration: none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-webkit-tap-highlight-color: transparent;
+}
+
+a:focus {
+	outline: none;
+	outline-offset: 0;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-webkit-tap-highlight-color: transparent;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+ul,
+li {
+	list-style-type: none;
+}
+
+input {
+	display: none;
+	-webkit-appearance: none;
+	outline: none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-webkit-tap-highlight-color: transparent;
+}
+
+/* flex style */
+
+.flex-row {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.flex-column {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+/* main style*/
+
+@font-face {
+	font-family: 'Exo2.0-Thin';
+	src: url('../fonts/Exo20-Thin.woff') format('woff'),
+	url('../fonts/Exo20-Thin.woff2') format('woff2');
+	font-weight: normal;
+	font-style: normal;
+
+}
+
+body {
+	width: 100%;
+	height: 100%;
+	min-height: 100vh;
+	overflow-x: hidden;
+	font-family: Trebuchet MS, Tahoma, sans-serif;
+	font-size: 16px;
+	background: url(../img/background.jpg) center center repeat;
+}
+
+.wrapper {
+	height: 100%;
+	width: 100%;
+	max-width: 1280px;
+	margin: 0 auto;
+	padding: 1em 0;
+	text-align: center;
+}
+
+.wrapper__header {
+	font-family: "Exo2.0-Thin", san-serif;
+	font-size: 2.25em;
+	font-weight: 100;
+	color: #ffffff;
+	margin-bottom: .23em;
+}
+
+.cards {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: flex-start;
+	width: 100%;
+	padding: 0 2.5em;
+	text-align: left;
+}
+
+/* style card with cat */
+
+.card {
+	margin: 1em;
+}
+
+.card__container {
+	width: 20em;
+	cursor: pointer;
+}
+
+/* card header with corner and slogan */
+
+.card__header {
+	display: flex;
+	justify-content: flex-end;
+	width: 100%;
+	height: 2.75em;
+	min-height: 2.75em;
+}
+
+.card__header__corner {
+	position: relative;
+	display: block;
+	width: 2.75em;
+	background: linear-gradient(to right bottom, transparent 50%, #ffffff 50%);
+	overflow: hidden;
+}
+
+.card__header__border {
+	display: block;
+	position: absolute;
+	height: 200%;
+	top: 0;
+	transform: skew(-43.5deg);
+	border-left: 5px solid #1698d9;
+	left: -1px;
+
+}
+
+.card__header__slogan {
+	display: block;
+	width: 18.25em;
+	height: 100%;
+	background: #ffffff;
+	border-radius: 0 .875em 0 0;
+	border-top: 4px solid #1698d9;
+	border-right: 4px solid #1698d9;
+	padding: .35em;
+	font-weight: bold;
+	letter-spacing: -.45px;
+	line-height: 2.5;
+	color: #666;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+
+}
+
+/* card body with cat and content */
+
+.card__body {
+	position: relative;
+	background: #ffffff;
+	width: 100%;
+	height: 27.25em;
+	min-height: 27.25em;
+	padding: 0 1.5em 0 2.75em;
+	overflow: hidden;
+	justify-content: flex-start;
+	align-items: flex-start;
+	border-radius: 0 0 .875em .875em;
+
+}
+
+.card__body__border {
+	display: block;
+	width: 100%;
+	height: 100%;
+	border-radius: 0 0 .875em .875em;
+	border: 4px solid #1698d9;
+	border-top: 0px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	box-sizing: border-box;
+}
+
+.card__name {
+	display: block;
+	width: 100%;
+	min-height: 1.1em;
+	font-size: 3em;
+	font-weight: bold;
+	line-height: 1.1;
+}
+
+.card__descr {
+	display: block;
+	width: 100%;
+	min-height: 1em;
+	font-size: 1.5em;
+	font-weight: bold;
+	line-height: 1.25;
+	padding-left: .2em;
+
+}
+
+.card__content {
+	font-size: .875em;
+	color: #666;
+	padding: 1em 0 0 .4em;
+}
+
+.card__cat {
+	position: absolute;
+	height: auto;
+	width: 24em;
+	z-index: 1;
+	width: 23.125em;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: -5.4375em;
+}
+
+/* circle with weight */
+
+.card__weight {
+	position: absolute;
+	bottom: 1em;
+	right: 1em;
+	width: 5em;
+	height: 5em;
+	border-radius: 50%;
+	z-index: 2;
+	color: #ffffff;
+	background: #1698d9;
+}
+
+.card__weight__value {
+	font-size: 2.7em;
+	line-height: .8;
+	margin-top: 3px;
+}
+
+.card__weight__unit {
+	font-size: 1.25em;
+}
+
+/* card footer */
+
+.buy-case {
+	display: flex;
+	justify-content: center;
+	color: #ffffff;
+	font-size: .8125em;
+	margin-top: 1em;
+	width: 100%;
+	max-width: 320px;
+}
+
+.buy-case__text {
+	margin-bottom: 1px;
+}
+
+.buy-case__link {
+	border-bottom: 1px dashed #1698d9;
+	color: #1698d9;
+	margin-left: 4px;
+}
+
+/* hover style card */
+
+.card__container:hover .card__weight {
+	background: #2ea9e6;
+}
+
+.card__container:hover .card__body__border,
+.card__container:hover .card__header__slogan,
+.card__container:hover .card__header__border {
+	border-color: #2ea9e6;
+}
+
+.card:hover .buy-case__link {
+	border-color: #2ea9e6;
+	color: #2ea9e6;
+}
